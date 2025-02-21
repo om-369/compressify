@@ -7,167 +7,7 @@
     <meta name="keywords" content="image tools, PDF tools, compress images, optimize PDFs, online tools">
     <meta name="author" content="Your Name">
     <title>Toolify - Home</title>
-    <style>
-        /* CSS Styling */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        header {
-            width: 100%;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin: 10px 0 0;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        nav {
-            margin-top: 10px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #ff6f61;
-        }
-
-        main {
-            flex: 1;
-            width: 90%;
-            max-width: 1200px;
-            padding: 20px 0;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            margin-bottom: 40px;
-            animation: slideIn 1s ease-in-out;
-        }
-
-        .hero h2 {
-            font-size: 2.2rem;
-            margin: 0;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            margin: 20px 0 0;
-        }
-
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .tool-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-
-        .tool-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .tool-card img {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 15px;
-        }
-
-        .tool-card h3 {
-            font-size: 1.4rem;
-            margin: 0;
-        }
-
-        .tool-card p {
-            font-size: 0.9rem;
-            margin: 10px 0 0;
-        }
-
-        footer {
-            width: 100%;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 20px 0;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            header p {
-                font-size: 1rem;
-            }
-
-            .hero h2 {
-                font-size: 1.8rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .tools-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <!-- Header -->
@@ -191,34 +31,75 @@
 
         <!-- Tools Grid -->
         <section id="tools" class="tools-grid">
+            <!-- Image Compression Tool -->
             <div class="tool-card">
                 <a href="img-compress.html" style="text-decoration: none; color: inherit;">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Image Compression">
+                    <img src="assets/icons/image-compression.png" alt="Image Compression">
                     <h3>Image Compression</h3>
                     <p>Compress and optimize your images for faster loading.</p>
                 </a>
             </div>
+
+            <!-- PDF Tools -->
             <div class="tool-card">
                 <a href="pdf-tools.html" style="text-decoration: none; color: inherit;">
-                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Tools">
+                    <img src="assets/icons/pdf-tools.png" alt="PDF Tools">
                     <h3>PDF Tools</h3>
                     <p>Merge, split, and compress PDFs effortlessly.</p>
                 </a>
             </div>
+
+            <!-- Image Converter -->
             <div class="tool-card">
                 <a href="image-converter.html" style="text-decoration: none; color: inherit;">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Image Converter">
+                    <img src="assets/icons/image-converter.png" alt="Image Converter">
                     <h3>Image Converter</h3>
                     <p>Convert images to different formats like JPG, PNG, and more.</p>
                 </a>
             </div>
+
+            <!-- PDF to Word -->
             <div class="tool-card">
                 <a href="pdf-to-word.html" style="text-decoration: none; color: inherit;">
-                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF to Word">
+                    <img src="assets/icons/pdf-to-word.png" alt="PDF to Word">
                     <h3>PDF to Word</h3>
                     <p>Convert PDF files to editable Word documents.</p>
                 </a>
             </div>
+
+            <!-- Image Resizer -->
+            <div class="tool-card">
+                <a href="image-resizer.html" style="text-decoration: none; color: inherit;">
+                    <img src="assets/icons/image-resizer.png" alt="Image Resizer">
+                    <h3>Image Resizer</h3>
+                    <p>Resize images to your desired dimensions.</p>
+                </a>
+            </div>
+
+            <!-- PDF to JPG -->
+            <div class="tool-card">
+                <a href="pdf-to-jpg.html" style="text-decoration: none; color: inherit;">
+                    <img src="assets/icons/pdf-to-jpg.png" alt="PDF to JPG">
+                    <h3>PDF to JPG</h3>
+                    <p>Convert PDF pages to high-quality JPG images.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Ad Space -->
+        <section id="ad-space">
+            <!-- Google AdSense Ad Unit -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_SENSE_ID"
+                    crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_AD_SENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </section>
     </main>
 
