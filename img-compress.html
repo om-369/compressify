@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compressify - A fully responsive image compression tool that allows you to optimize images with different compression levels.">
+    <meta name="keywords" content="image compression, optimize images, compress images, image tool, SEO, Google AdSense">
+    <meta name="author" content="Your Name">
+    <title>Compressify - Image Compression Tool</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        main {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        #compression-tool {
+            text-align: center;
+        }
+
+        #compression-tool input[type="file"] {
+            display: none;
+        }
+
+        #compression-tool label {
+            display: inline-block;
+            background: #2575fc;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #compression-tool label:hover {
+            background: #1a5bbf;
+        }
+
+        #compression-tool select {
+            margin: 20px 0;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            font-size: 1rem;
+            background: #fff;
+            color: #333;
+            cursor: pointer;
+        }
+
+        #compression-tool button {
+            background: #ff6f61;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #compression-tool button:hover {
+            background: #ff3b2f;
+        }
+
+        #image-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        #image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        #image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        #download-link {
+            display: none;
+            margin-top: 20px;
+            color: #fff;
+            background: #4caf50;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        #download-link:hover {
+            background: #45a049;
+        }
+
+        #ad-space {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            #image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #image-container img {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML Structure -->
+    <header>
+        <h1>Compressify</h1>
+        <p>Optimize your images with ease!</p>
+    </header>
+
+    <main>
+        <!-- Image Compression Tool -->
+        <section id="compression-tool">
+            <label for="image-input">Choose Image</label>
+            <input type="file" id="image-input" accept="image/*">
+            <select id="compression-level">
+                <option value="0.1">Low Compression</option>
+                <option value="0.5">Medium Compression</option>
+                <option value="0.9">High Compression</option>
+            </select>
+            <button id="compress-btn">Compress Image</button>
+            <div id="image-container">
+                <img id="original-image" src="#" alt="Original Image" style="display: none;">
+                <img id="compressed-image" src="#" alt="Compressed Image" style="display: none;">
+            </div>
+            <a id="download-link" href="#" download="compressed-image.jpg">Download Compressed Image</a>
+        </section>
+
+        <!-- Google AdSense Ad Unit -->
+        <section id="ad-space">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_SENSE_ID"
+                    crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_AD_SENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Compressify. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Functionality -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/compressorjs/1.1.1/compressor.min.js"></script>
+    <script>
+        document.getElementById('compress-btn').addEventListener('click', function() {
+            const file = document.getElementById('image-input').files[0];
+            const compressionLevel = parseFloat(document.getElementById('compression-level').value);
+
+            if (file) {
+                // Display the original image
+                const originalImage = document.getElementById('original-image');
+                originalImage.src = URL.createObjectURL(file);
+                originalImage.style.display = 'block';
+
+                // Compress the image
+                new Compressor(file, {
+                    quality: compressionLevel,
+                    success(result) {
+                        const compressedImage = document.getElementById('compressed-image');
+                        const downloadLink = document.getElementById('download-link');
+
+                        compressedImage.src = URL.createObjectURL(result);
+                        compressedImage.style.display = 'block';
+                        downloadLink.href = URL.createObjectURL(result);
+                        downloadLink.style.display = 'block';
+                    },
+                    error(err) {
+                        console.error(err.message);
+                        alert('An error occurred while compressing the image.');
+                    },
+                });
+            } else {
+                alert('Please select an image first.');
+            }
+        });
+    </script>
+</body>
+</html>
